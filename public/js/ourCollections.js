@@ -14,18 +14,20 @@ function loadCollections() {
     for (var i = 0; i < collections.length; i++) {
         var collection = collections[i];
         var html = 
-            `<section class="intro-section">
-            <div class="intro-text">
-                <h2>${collection.name}</h2>
-                <p>${collection.description}</p>
-                <p></p>
-                <p>
-                    Explore <a href="./collection.html">${collection.name}</a>
-                </p>
+            `<section class="collection">
+            <a href="./collection.html"><h2>${collection.name}</h2></a>
+            <div class="flex flex-row">
+                <div class="">
+                    <p>${collection.description}</p>
+                    <p class="mt-5">
+                        Explore <a class="text-blue-600 underline" href="./collection.html">${collection.name}</a>
+                    </p>
+                </div>
+                <div>
+                    <img class="feature-image" src="${collection.imageUrl}">
+                </div>
             </div>
-            <div>
-                <img class="feature-image" src="${collection.imageUrl}">
-            </div>
+            
             </section>
             <hr>`;
         container.innerHTML += html;

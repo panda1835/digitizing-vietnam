@@ -10,22 +10,21 @@ function loadCollections() {
     var container = document.getElementById('collectionContainer');
     container.innerHTML = ''; // Clear the container
     
+
     for (var i = 0; i < collections.length; i++) {
         var collection = collections[i];
         var html = 
-            `<div class="blog-post">
-            <div>
-                <img class="feature-image" src="${collection.imageUrl}">
-            </div>
-            <div class="content">
-                <a href="./blog_post.html" class="blog-title">Blog post name</a>
-                <div class="blog-meta">mm/dd/yy - [author name]</div>
-                <div class="blog-description">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            `<div class="flex flex-row items-center border-black border-2 rounded-lg mb-5 py-2 pr-10">
+                <img class="w-44 h-32 mx-5" src="${collection.imageUrl}">
+                <div class="">
+                    <a href="./blog_post.html"><h2>Blog post name</h2></a>
+                    <div class="text-gray-500 mb-2">mm/dd/yy - [author name]</div>
+                    <div class="mb-2">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                    <a href="./blog_post.html" class="text-blue-600">Read more ...</a>
                 </div>
-                <a href="./blog_post.html" class="read-more">Read more ...</a>
-            </div>
             </div>`;
         container.innerHTML += html;
     }

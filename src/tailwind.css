@@ -1,7 +1,21 @@
-.team-section {
-    display: flex;
-    justify-content: space-evenly; 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
 }
+
+h2 {
+  @apply text-2xl font-bold mb-4 text-primary;
+}
+
+hr {
+    @apply border-black my-5;
+}
+
 .team-member {
     display: inline-block; /* Place team member divs side by side */
     margin: 10px; /* Add some space around each team member */
@@ -13,15 +27,4 @@
     width: 200px; /* Set the width of the image */
     height: 200px; /* Set the height of the image */
     margin-bottom: 10px; /* Add some space below the image */
-}
-.member-name, .member-bio {
-    display: block; /* Display name and bio on new lines */
-}
-
-.our-project, .our-goal {
-    margin-bottom: 50px;
-}
-
-li {
-    margin-bottom: 10px;
 }
