@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tailwind.css">
     <title>Digitizing Vietnam</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tify@0.29.2/dist/tify.css">
+    <script src="https://cdn.jsdelivr.net/npm/tify@0.29.2/dist/tify.js"></script>
 </head>
 <body>
     <div class="page flex flex-col justify-between min-h-screen">
@@ -12,8 +14,7 @@
             <div id="navigation-bar"></div>
             <section class="our-collections">
                 <h2>Our Collections</h2>
-                <div class="collection-container">
-                </div>
+                <div id="tify" style="height: 640px"></div>
             </section>
         </div>
         
@@ -21,5 +22,12 @@
     </div>
     
     <script src="./js/headerFooter.js"></script>
+    <script>
+        new Tify({
+          container: '#tify',
+          language: 'en',
+          manifestUrl: 'https://gist.githubusercontent.com/panda1835/4dda838eada25e1a2c06f61172ab8cb0/raw/f3c16d3a298d0b1868242940d9f599287babf8e1/manifest.json',
+        })
+    </script>
 </body>
 </html>
